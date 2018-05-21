@@ -20,11 +20,40 @@
                                     <field name="code"/>
                                 </group>
                                 <group>
-                                    <!--<field name="dsection_idsate"/>-->
-                                    <!--<field name="information_url_ids"/>-->
+                                    <field name="section_ids"/>
                                 </group>
                             </group>
-                            <field name="text_body"/>
+                            <div>
+                                <h2>
+                                    <label for="text_body" string="General Text"/>
+                                </h2>
+                                <field name="text_body"
+                                       placeholder="Write text" widget="html"/>
+                            </div>
+                            <div>
+                                <h2>
+                                    <label for="where_applicable" string="Where Applicable"/>
+                                </h2>
+                                <field name="where_applicable"
+                                       placeholder="Write text" widget="html"/>
+                            </div>
+                            <div>
+                                <h2>
+                                    <label for="general_concept" string="General Concept"/>
+                                </h2>
+                                <field name="general_concept"
+                                       placeholder="Write text" widget="html"/>
+                            </div>
+                            <div>
+                                <h2>
+                                    <label for="literature" string="Literature"/>
+                                </h2>
+                                <field name="literature" widget="html"/>
+                            </div>
+                            <div>
+                                <field name="information_url_ids"
+                                       widget="one2many_list"/>
+                            </div>
                         </form>
                     </sheet>
                 </form>
@@ -50,6 +79,18 @@
                     <field name="code"/>
                     <field name="date"/>
                 </tree>
+            </field>
+        </record>
+
+        <record id='knowledge_section_form_view' model='ir.ui.view'>
+            <field name="name">section section</field>
+            <field name="model">section.section</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <field name="name"/>
+                    </group>
+                </form>
             </field>
         </record>
 
