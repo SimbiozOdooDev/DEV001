@@ -16,13 +16,15 @@
                         <form>
                             <group>
                                 <group>
-                                    <field string="date"/>
-                                    <field string="code"/>
+                                    <field name="date"/>
+                                    <field name="code"/>
                                 </group>
                                 <group>
-                                    <field string="section_ids"/>
+                                    <!--<field name="dsection_idsate"/>-->
+                                    <!--<field name="information_url_ids"/>-->
                                 </group>
                             </group>
+                            <field name="text_body"/>
                         </form>
                     </sheet>
                 </form>

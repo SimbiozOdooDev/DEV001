@@ -22,8 +22,10 @@ class SourcesOfInformation(models.Model):
     _name = 'sources.information'
 
     name = fields.Char(string='URL')
+    test_1 = fields.Char()
 
 class Section(models.Model):
     _name = 'section.section'
 
     name = fields.Char(string='Section Name')
+    test_1 = fields.Char()
