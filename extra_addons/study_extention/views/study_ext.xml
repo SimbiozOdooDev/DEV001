@@ -19,6 +19,7 @@
 
                      <field name="name" position="after">
                          <field name="active"/>
+                         <field name="stud_count"/>
                      </field>
 
                      <xpath expr="//group[1]" position="after">
@@ -27,21 +28,21 @@
                                  <field name="description"/>
                              </page>
                              <page string="Students list">
-                                 <field name="students_ids" readonly="1"/>
+                                 <field name="students_ids"/>
                              </page>
                          </notebook>
                      </xpath>
 
-                     <xpath expr="//group[1]" position="before">
-                             <div class="oe_button_box" name="buttons">
-                                     <button class="oe_stat_button"
-                                             type="object"
-                                             name=""
-                                             icon="fa-users">
-                                         <field name="stud_count" widget="statinfo" string="students"/>
-                                     </button>
-                             </div>
-                     </xpath>
+                     <!--<xpath expr="//group[1]" position="before">-->
+                             <!--<div class="oe_button_box" name="buttons">-->
+                                     <!--<button class="oe_stat_button"-->
+                                             <!--type="object"-->
+                                             <!--name=""-->
+                                             <!--icon="fa-users">-->
+                                         <!--<field name="stud_count" widget="statinfo" string="students"/>-->
+                                     <!--</button>-->
+                             <!--</div>-->
+                     <!--</xpath>-->
 
                      <xpath expr="//sheet[1]" position="after">
                           <div class="oe_chatter">
@@ -53,26 +54,6 @@
 
                 </field>
           </record>
-
-          <!--<record id="study_list_inherit" model="ir.ui.view">-->
-                    <!--<field name="name">study_list_inherit</field>-->
-                    <!--<field name="model">study.study</field>-->
-                    <!--<field name="inherit_id" ref="study.study_list"/>-->
-                    <!--<field name="arch" type="xml">-->
-
-                    <!--</field>-->
-          <!--</record>-->
-
-          <!--<record id="res_partner_inherit" model="ir.ui.view">-->
-                <!--<field name="name">res_partner_inherit</field>-->
-                <!--<field name="model">res.partner</field>-->
-                <!--<field name="inherit_id" ref="base.view_partner_form"/>-->
-                <!--<field name="arch" type="xml">-->
-                        <!--<xpath expr="//field[@name='function']" position="before">-->
-                                <!--<field name="course_id"/>-->
-                        <!--</xpath>-->
-                <!--</field>-->
-          <!--</record>-->
 
           <record id="student_action" model="ir.actions.act_window">
                     <field name="name">Student List</field>

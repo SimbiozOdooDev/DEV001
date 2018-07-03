@@ -21,7 +21,7 @@ class StudyModuleExtention(models.Model):
                               ('closed', 'Finished')], default='stay')
 
     # Make Many2many field type
-    students_ids = fields.One2many('res.partner', 'course_id', string='students list')
+    students_ids = fields.Many2many('res.partner', string='students list')
 
     stud_count = fields.Integer('Students', compute=_compute_students)
 
@@ -32,7 +32,7 @@ class StudyModuleExtention(models.Model):
 class StudentsExtention(models.Model):
     _inherit = 'res.partner'
 
-    course_id = fields.Many2one('study.study', string='Active course')
+    rate = fields.Char(string='Students rate')
 
 
 # class CourseList(models.Model):
@@ -46,5 +46,17 @@ class StudentsExtention(models.Model):
 #
 #     name = fields.Daytime('Course name')
 #     classes_id = fields.Many2one('study.study', string='Class')
+
+#
+# return {
+#     'name': _('Questionnaire'),
+#     'view_type': 'form',
+#     'view_mode': 'form',
+#     'res_model': 'open.questionnaire',
+#     'type': 'ir.actions.act_window',
+#     'views': [(res_id, 'form')],
+#     'target': 'new',
+#     'context': context
+# }
 
 
