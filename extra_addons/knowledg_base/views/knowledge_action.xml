@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id='knowledge_base_action' model='ir.actions.act_window'>
+            <field name="name">knowledge base action</field>
+            <field name="res_model">knowledge.base</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="knowledge_base_tree_view"/>
+            <field name="context">{}</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Click to create a new analytic distribution.
+                </p>
+            </field>
+        </record>
+
+    </data>
+</openerp>

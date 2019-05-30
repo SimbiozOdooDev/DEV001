@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <record id='knowledge_base_form_view' model='ir.ui.view'>
+            <field name="name">knowledge base form view</field>
+            <field name="model">knowledge.base</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <div class="oe_title">
+                            <label for="name" class="oe_edit_only"/>
+                            <h1>
+                                <field name="name" class="oe_inline"/>
+                            </h1>
+                        </div>
+                        <form>
+                            <group>
+                                <group>
+                                    <field name="date"/>
+                                    <field name="code"/>
+                                </group>
+                                <group>
+                                    <field name="section_ids"/>
+                                </group>
+                            </group>
+                            <div>
+                                <h2>
+                                    <label for="text_body" string="General Text"/>
+                                </h2>
+                                <field name="text_body"
+                                       placeholder="Write text" widget="html"/>
+                            </div>
+                            <div>
+                                <h2>
+                                    <label for="where_applicable" string="Where Applicable"/>
+                                </h2>
+                                <field name="where_applicable"
+                                       placeholder="Write text" widget="html"/>
+                            </div>
+                            <div>
+                                <h2>
+                                    <label for="general_concept" string="General Concept"/>
+                                </h2>
+                                <field name="general_concept"
+                                       placeholder="Write text" widget="html"/>
+                            </div>
+                            <div>
+                                <h2>
+                                    <label for="literature" string="Literature"/>
+                                </h2>
+                                <field name="literature" widget="html"/>
+                            </div>
+                            <div>
+                                <field name="information_url_ids"
+                                       widget="one2many_list"/>
+                            </div>
+                        </form>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="knowledge_base_filter_view" model="ir.ui.view">
+            <field name="name">knowledge base filter view</field>
+            <field name="model">knowledge.base</field>
+            <field name="arch" type="xml">
+                <search string="Knowledge Base">
+                    <field name="name" string="Name"/>
+                </search>
+             </field>
+         </record>
+
+        <record id='knowledge_base_tree_view' model='ir.ui.view'>
+            <field name="name">knowledge base Tree View</field>
+            <field name="model">knowledge.base</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="code"/>
+                    <field name="date"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id='knowledge_section_form_view' model='ir.ui.view'>
+            <field name="name">section section</field>
+            <field name="model">section.section</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <field name="name"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+    </data>
+</openerp>
